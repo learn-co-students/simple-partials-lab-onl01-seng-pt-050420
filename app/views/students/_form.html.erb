@@ -1,9 +1,13 @@
-<label>Name:</label><br>
-<%= text_field_tag :name, @student.name %><br>
- 
-<label>Hometown</label><br>
-<%= text_area_tag :hometown, @student.hometown %><br>
+<%= form_for @student do |f|%> 
 
-<label>Birthday</label><br>
-<%= text_area_tag :birthday, @student.birthday %><br>
-<%= submit_tag %>
+<%= f.label :name %>  
+<%= f.text_field :name %>
+ 
+<%= f.label :hometown %>  
+<%= f.text_field :hometown %> 
+
+<%= f.label :birthday %>  
+<%= f.text_field :birthday %> 
+
+<%= f.submit %>
+<% end %>
